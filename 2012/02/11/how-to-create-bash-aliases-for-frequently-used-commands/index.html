@@ -6,20 +6,20 @@
   <title>How to: Create bash aliases for frequently used commands | kvrohit.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:
-12# General alias syntaxalias name=&apos;command&apos;
-where ‘name’ is the alias name and">
+# General alias syntaxalias name=&apos;command&apos;
+where ‘name’ is the alias name and c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to: Create bash aliases for frequently used commands">
-<meta property="og:url" content="http://yoursite.com/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/index.html">
+<meta property="og:url" content="http://kvrohit.github.io/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/index.html">
 <meta property="og:site_name" content="kvrohit.github.io">
 <meta property="og:description" content="The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:
-12# General alias syntaxalias name=&apos;command&apos;
-where ‘name’ is the alias name and">
+# General alias syntaxalias name=&apos;command&apos;
+where ‘name’ is the alias name and c">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to: Create bash aliases for frequently used commands">
 <meta name="twitter:description" content="The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:
-12# General alias syntaxalias name=&apos;command&apos;
-where ‘name’ is the alias name and">
+# General alias syntaxalias name=&apos;command&apos;
+where ‘name’ is the alias name and c">
   
     <link rel="alternative" href="/atom.xml" title="kvrohit.github.io" type="application/atom+xml">
   
@@ -75,7 +75,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kvrohit.github.io"></form>
       </div>
     </div>
   </div>
@@ -108,15 +108,15 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># General alias syntax</span></span><br><span class="line"><span class="built_in">alias</span> name=<span class="string">'command'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># General alias syntax</span></span><br><span class="line"><span class="built_in">alias</span> name=<span class="string">'command'</span></span><br></pre></td></tr></table></figure>
 <p>where ‘name’ is the alias name and command is any valid shell command. If you want your aliases to be persistant then put them in your ~/.bashrc file.</p>
 <p>For example, you can create some handy shortcuts for apt-get:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Alias for apt-get</span></span><br><span class="line"><span class="built_in">alias</span> install=<span class="string">'sudo apt-get install'</span></span><br><span class="line"><span class="built_in">alias</span> addrepo=<span class="string">'sudo apt-add-repository'</span></span><br><span class="line"><span class="built_in">alias</span> remove=<span class="string">'sudo apt-get remove'</span></span><br><span class="line"><span class="built_in">alias</span> autoremove=<span class="string">'sudo apt-get autoremove'</span></span><br><span class="line"><span class="built_in">alias</span> update=<span class="string">'sudo apt-get update'</span></span><br><span class="line"><span class="built_in">alias</span> upgrade=<span class="string">'sudo apt-get upgrade'</span></span><br><span class="line"><span class="built_in">alias</span> distupgrade=<span class="string">'sudo apt-get dist-upgrade'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Alias for apt-get</span></span><br><span class="line"><span class="built_in">alias</span> install=<span class="string">'sudo apt-get install'</span></span><br><span class="line"><span class="built_in">alias</span> addrepo=<span class="string">'sudo apt-add-repository'</span></span><br><span class="line"><span class="built_in">alias</span> remove=<span class="string">'sudo apt-get remove'</span></span><br><span class="line"><span class="built_in">alias</span> autoremove=<span class="string">'sudo apt-get autoremove'</span></span><br><span class="line"><span class="built_in">alias</span> update=<span class="string">'sudo apt-get update'</span></span><br><span class="line"><span class="built_in">alias</span> upgrade=<span class="string">'sudo apt-get upgrade'</span></span><br><span class="line"><span class="built_in">alias</span> distupgrade=<span class="string">'sudo apt-get dist-upgrade'</span></span><br></pre></td></tr></table></figure>
 <p>Restart your shell and you should be good to go!</p>
 <p>Now you can simply type <code>install firefox</code> instead of <code>sudo apt-get install firefox</code>.</p>
 <p>It is a common practice to put all your aliases in a separate file and then load that file into your .bashrc. The way to do this is to copy all the aliases to another file say, .bash_aliases.</p>
 <p>Then, edit your .bashrc file and add the following code:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># include .bash_aliases if it exists</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-f</span> <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span> ]; <span class="keyword">then</span></span><br><span class="line">    . <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># include .bash_aliases if it exists</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-f</span> <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span> ]; <span class="keyword">then</span></span><br><span class="line">    . <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>Inform the shell of these changes by executing the command: <code>exec $SHELL</code></p>
 <p><strong><em>NOTE</em></strong></p>
 <p>If you are on Ubuntu, you do not have to edit the .bashrc file; .bash_aliases will be already included for you.</p>
@@ -124,7 +124,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" data-id="ci8q10s2f001f3scm0fhb29w5" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" data-id="ci8q3y3y0001fa5cmi3wiihyl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alias/">alias</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>

@@ -8,7 +8,7 @@
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="kvrohit.github.io">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://kvrohit.github.io/index.html">
 <meta property="og:site_name" content="kvrohit.github.io">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -69,7 +69,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kvrohit.github.io"></form>
       </div>
     </div>
   </div>
@@ -113,7 +113,7 @@ ga('send', 'pageview');
 <li><a href="Sign up for free">Bluemix account</a></li>
 </ol>
 <h3 id="First_steps">First steps</h3><p>Ensure that you have node and npm installed and running correctly. To test open a command window and type:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
 <p>It should return the version information in each case indicating that the programs are correctly installed.</p>
 <p><code>npm</code> is a package manager for node; it makes it easy to install and manage additional node packages that your application may require. npm is a powerful tool as it automatically handles package dependencies.</p>
 <h3 id="Initializing_a_node_application">Initializing a node application</h3><p>Every node application has a package.json file that contains a description about the app, module dependencies, start scripts and so on. This is usually the first file created to describe the app and its dependencies.</p>
@@ -125,19 +125,19 @@ ga('send', 'pageview');
 <li>After that is done, you will end up with a package.json file.</li>
 </ol>
 <p>An example package.json is shown below:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"test"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"test"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Installing_dependencies">Installing dependencies</h3><p>Our application requires the express node module to build a web application. The npm install command can be used to install this dependency. In the application directory type the following command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express@<span class="number">3.15</span>.<span class="number">2</span> --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install express@<span class="number">3.15</span>.<span class="number">2</span> --save</span><br></pre></td></tr></table></figure>
 <p>This will do two things:</p>
 <ol>
 <li>Download and install express and all of its dependencies to this application’s folder. These are stored under the node_modules directory.</li>
 <li>Creates an entry in the package.json file under the dependencies section.</li>
 </ol>
 <p>Here is a look at the updated package.json file:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"start"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">        <span class="string">"express"</span>: <span class="string">"^3.15.2"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"start"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">        <span class="string">"express"</span>: <span class="string">"^3.15.2"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Note: Under the scripts section, you have to manually change “test” to “start”; this tells Bluemix the entry point of this application. Once the app has been deployed, Bluemix calls the start script i.e. <code>node app.js</code></p>
 <h3 id="Creating_a_minimalistic_web_application">Creating a minimalistic web application</h3><p>Now that express is installed, we can go ahead and create a minimalistic web application. All this application does is to print out <code>&#39;hello world&#39;</code> when the application is accessed. As stated before the entry point to our application will be called <code>app.js</code>. Let’s go ahead and create a file called app.js and put in the following code:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">        app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Port and host configuration</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.VCAP_APP_PORT || <span class="number">3000</span>);</span><br><span class="line">app.set(<span class="string">'host'</span>, process.env.VCAP_APP_HOST || <span class="string">'localhost'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Define a default route</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>&#123;</span><br><span class="line">    response.send(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start serving</span></span><br><span class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">        app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Port and host configuration</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.VCAP_APP_PORT || <span class="number">3000</span>);</span><br><span class="line">app.set(<span class="string">'host'</span>, process.env.VCAP_APP_HOST || <span class="string">'localhost'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Define a default route</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>&#123;</span><br><span class="line">    response.send(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start serving</span></span><br><span class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="Code_walkthrough">Code walkthrough</h3><ul>
 <li>Step 1: Import the express module into our app; this is done by using the require method call.</li>
 <li>Step 2: Create an app instance by calling the express() method.</li>
@@ -146,9 +146,9 @@ ga('send', 'pageview');
 <li>Step 5: The listen method is called to bind and listen to connections on the given host and port.</li>
 </ul>
 <p>Run application locally. Open the terminal, <code>cd</code> into the project directory and run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
 <p>You should see an output something like this:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">activate@<span class="number">0.0</span>.<span class="number">1</span> start C:\rohit\node-apps\activate</span><br><span class="line">node app.js</span><br><span class="line">Express server listening on port <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">activate@<span class="number">0.0</span>.<span class="number">1</span> start C:\rohit\node-apps\activate</span><br><span class="line">node app.js</span><br><span class="line">Express server listening on port <span class="number">3000</span></span><br></pre></td></tr></table></figure>
 <p>This indicates that the express server is started and is ready to serve requests on port 3000. Go to <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> to see the output. Here is a screen grab:</p>
 <p>Now that we have this application running locally, the next step is to deploy it on Bluemix.</p>
 <h3 id="Deploying_on_Bluemix">Deploying on Bluemix</h3><ol>
@@ -160,22 +160,22 @@ ga('send', 'pageview');
 </ol>
 <p>As you can see the default route is shown in the overview section, i.e., <a href="http://activate.stage1.mybluemix.net/" target="_blank" rel="external">http://activate.stage1.mybluemix.net/</a></p>
 <h3 id="Pushing_your_application_to_the_cloud">Pushing your application to the cloud</h3><p>The final step is to push your application code to the cloud, i.e., to the Bluemix app that you just created. The pre-requisite for this is to install the cloud foundry deployment tools as mentioned in the pre-requisites section. To verify the cf command line tool’s installation; open a terminal and type:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cf -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf -v</span><br></pre></td></tr></table></figure>
 <p>You should get a response with version information indicating that the installation is successful. Go to the project directory in terminal and follow these steps:</p>
 <ul>
 <li>Connect to Bluemix:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cf api https://api.stage1.ng.bluemix.net</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf api https://api.stage1.ng.bluemix.net</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Login to bluemix:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cf login</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf login</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Push application to cloud:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cf push &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf push &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
 <p>where app_name is the name of the application that you specified during Bluemix app creation process. For this example it will be:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cf push activate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf push activate</span><br></pre></td></tr></table></figure>
 <p>The application deployment will be initiated as soon as the push command is run. Bluemix will automatically figure out the application type, read the package.json file and install all dependencies.</p>
 <p>TIP: The cf push command copies all the contents of the project directory into the server. At times some files/directories need to be ignored.</p>
 <p>In our case the ‘node_modules’ directory need not be uploaded as it will be created dynamically on the server after app deployment. To tell cf to ignore this folder simply create a file called .cfignore in the project root directory with the content: node_modules/</p>
@@ -187,7 +187,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/" data-id="ci8q10s1q00073scmu2tseuhr" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/" data-id="ci8q3y3x30007a5cm8zhp3yxs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blumix/">blumix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -285,7 +285,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/09/07/project-doge-on-micromax-canvas-hd/" data-id="ci8q10s1u000f3scmssheuq2k" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2014/09/07/project-doge-on-micromax-canvas-hd/" data-id="ci8q3y3x7000fa5cm6p6trglm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/custom-rom/">custom rom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kitkat/">kitkat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/micromax-canvas-hd/">micromax canvas hd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project-doge/">project doge</a></li></ul>
@@ -329,7 +329,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/02/16/standing/" data-id="ci8q10s1y000r3scmplh3dqnz" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2014/02/16/standing/" data-id="ci8q3y3xl000ra5cmon9s6beo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funny/">funny</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xkcd/">xkcd</a></li></ul>
@@ -368,13 +368,13 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>Xfwm 4.11 adds the sync to vblank feature; enable it to fix video tearing issues.</p>
+<img src="/2013/10/31/xfce4-video-tearing/xfwm-vsync-settings.png">
 <p>Open <code>Window Manager Tweaks &gt; Compositor</code> tab and enable the ‘Synchronize drawing to the vertical blank’ setting.</p>
-<p><img src="/img/xfwm-vsync-settings.png" alt="Xfwm vSync Settings"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/10/31/xfce4-video-tearing/" data-id="ci8q10s22000x3scmwle37s6d" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2013/10/31/xfce4-video-tearing/" data-id="ci8q3y3xq000xa5cm79zcp5av" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xfce/">xfce</a></li></ul>
@@ -414,13 +414,13 @@ ga('send', 'pageview');
       
         <p>Binding hardware volume control to mixer</p>
 <p>Go to <code>Settings &gt; Keyboard &gt; Shortcuts</code> and add the following:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">amixer <span class="built_in">set</span> Master <span class="number">5</span>%+</span><br><span class="line">amixer <span class="built_in">set</span> Master <span class="number">5</span>%-</span><br><span class="line">amixer <span class="built_in">set</span> Master toggle</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">amixer <span class="built_in">set</span> Master <span class="number">5</span>%+</span><br><span class="line">amixer <span class="built_in">set</span> Master <span class="number">5</span>%-</span><br><span class="line">amixer <span class="built_in">set</span> Master toggle</span><br></pre></td></tr></table></figure>
 <p>Source: <a href="http://schman.at/shortcuts-mit-xfce-setzen" target="_blank" rel="external">http://schman.at/shortcuts-mit-xfce-setzen</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/10/24/xfce-tricks/" data-id="ci8q10s2400133scmfimeb96l" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2013/10/24/xfce-tricks/" data-id="ci8q3y3xs0013a5cmff8sm3u0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xfce/">xfce</a></li></ul>
@@ -432,261 +432,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-what-is-love" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2012/12/30/what-is-love/" class="article-date">
-  <time datetime="2012-12-29T18:30:00.000Z" itemprop="datePublished">2012-12-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/blog/">blog</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/12/30/what-is-love/">What is love?</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/img/what-is-love.png" alt="What is love?"></p>
-<p>And that, ladies and gentlemen is the answer to your question! Linux style :P</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2012/12/30/what-is-love/" data-id="ci8q10s2700173scmu2aevjkz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funny/">funny</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-create-live-usb" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2012/06/05/how-to-create-live-usb/" class="article-date">
-  <time datetime="2012-06-04T18:30:00.000Z" itemprop="datePublished">2012-06-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/blog/">blog</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/06/05/how-to-create-live-usb/">How to: Create Live USB, the easy way!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Ever wondered if you could create a live usb without using any third party software ? Read on…</p>
-<p>Pre-requisites:</p>
-<ul>
-<li>Linux</li>
-<li>USB Stick</li>
-<li>ISO image of your favorite linux distro</li>
-</ul>
-<p>We’ll be using the <code>dd</code> command to write the iso file to the usb stick. The general syntax is shown below:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use the dd command to write to your usb</span></span><br><span class="line"><span class="comment"># parameters: if='input file', of='output file/device'</span></span><br><span class="line"><span class="comment"># use dmesg to find out your usb device. Ex: /dev/sdb</span></span><br><span class="line"><span class="comment"># replace sdx with your device name</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=path_to_iso.iso of=/dev/sdx</span><br></pre></td></tr></table></figure>
-<p>And now, the example. Suppose you want to create a live usb out of your ubuntu-12.04 iso, assuming that your usb stick is mounted at <code>/dev/sdb</code>, the command to issue is:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=ubuntu-<span class="number">12.04</span>.iso of=/dev/sdb</span><br></pre></td></tr></table></figure>
-<p>Extremely simple, isn’t it ?</p>
-<p><strong><em>IMPORTANT:</em></strong></p>
-<ul>
-<li>Take extreme caution while specifying the output device! You do not want to be messing up your HDD.</li>
-<li>As with many linux commands, you will not see any output when you issue the command. You will be notified when the process is complete.</li>
-<li>Your USB stick will be formatted, ensure that you have a backup of your data!</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2012/06/05/how-to-create-live-usb/" data-id="ci8q10s29001a3scm57y63y7r" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live-usb/">live usb</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-create-bash-aliases-for-frequently-used-commands" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" class="article-date">
-  <time datetime="2012-02-10T18:30:00.000Z" itemprop="datePublished">2012-02-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/blog/">blog</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/">How to: Create bash aliases for frequently used commands</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># General alias syntax</span></span><br><span class="line"><span class="built_in">alias</span> name=<span class="string">'command'</span></span><br></pre></td></tr></table></figure>
-<p>where ‘name’ is the alias name and command is any valid shell command. If you want your aliases to be persistant then put them in your ~/.bashrc file.</p>
-<p>For example, you can create some handy shortcuts for apt-get:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Alias for apt-get</span></span><br><span class="line"><span class="built_in">alias</span> install=<span class="string">'sudo apt-get install'</span></span><br><span class="line"><span class="built_in">alias</span> addrepo=<span class="string">'sudo apt-add-repository'</span></span><br><span class="line"><span class="built_in">alias</span> remove=<span class="string">'sudo apt-get remove'</span></span><br><span class="line"><span class="built_in">alias</span> autoremove=<span class="string">'sudo apt-get autoremove'</span></span><br><span class="line"><span class="built_in">alias</span> update=<span class="string">'sudo apt-get update'</span></span><br><span class="line"><span class="built_in">alias</span> upgrade=<span class="string">'sudo apt-get upgrade'</span></span><br><span class="line"><span class="built_in">alias</span> distupgrade=<span class="string">'sudo apt-get dist-upgrade'</span></span><br></pre></td></tr></table></figure>
-<p>Restart your shell and you should be good to go!</p>
-<p>Now you can simply type <code>install firefox</code> instead of <code>sudo apt-get install firefox</code>.</p>
-<p>It is a common practice to put all your aliases in a separate file and then load that file into your .bashrc. The way to do this is to copy all the aliases to another file say, .bash_aliases.</p>
-<p>Then, edit your .bashrc file and add the following code:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># include .bash_aliases if it exists</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-f</span> <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span> ]; <span class="keyword">then</span></span><br><span class="line">    . <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>Inform the shell of these changes by executing the command: <code>exec $SHELL</code></p>
-<p><strong><em>NOTE</em></strong></p>
-<p>If you are on Ubuntu, you do not have to edit the .bashrc file; .bash_aliases will be already included for you.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" data-id="ci8q10s2f001f3scm0fhb29w5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alias/">alias</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-new-prototype" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/06/08/new-prototype/" class="article-date">
-  <time datetime="2007-06-07T18:30:00.000Z" itemprop="datePublished">2007-06-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/blog/">blog</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/06/08/new-prototype/">New Prototype</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://3.bp.blogspot.com/_L4ZwP_X8bCo/RmmL7g35EXI/AAAAAAAAAA4/D7he4uW390c/s1600/GepScreen.bmp" alt="New Prototype"></p>
-<p>It has been long… a long time since the blog has been updated. For the past few months our development work has suffered due to the pressure on us from the academic point of view.</p>
-<p>Well, I did find time to develop a new prototype audio player. This player is just an experiment with the FMOD library. The FMOD library gives an array of functions to play audio and believe me their product is excellent. So here it is the very basic prototype player based on FMOD engine.</p>
-<p>There is whole lot more to the FMOD library than just playing music, it is also has a DSP library to process the RAW data. A long way to go to discover all the features of this powerful library so watch out for further releases.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2007/06/08/new-prototype/" data-id="ci8q10s2i001m3scmz0mzgk10" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio-player/">audio player</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fmod/">fmod</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prototype/">prototype</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iamps-back" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2006/04/27/iamps-back/" class="article-date">
-  <time datetime="2006-04-26T18:30:00.000Z" itemprop="datePublished">2006-04-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/blog/">blog</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2006/04/27/iamps-back/">iAMP&#39;s Back!!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://photos1.blogger.com/blogger/901/2661/1600/iAmp.2.gif" alt="iAmp"></p>
-<p>Well, iAMP’s back, I’ve decided to keep it as the default skin.. atleast for now… (by the way, the player does not have two stop buttons, I was too lazy to draw the pause button, so I just used the stop button as a substitute)</p>
-<p>Newly Added features:</p>
-<ul>
-<li>ID3v2x tag handling (Rohit, et. al.)</li>
-<li>MPEG information reading</li>
-<li>Real time tag editing!!! can even update the tag while the song is playing!!</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2006/04/27/iamps-back/" data-id="ci8q10s1100003scmf6aac5cw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio-player/">audio player</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iamp/">iamp</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         

@@ -15,7 +15,7 @@ ISO image of your favorite linux distro
 We’ll be using the dd command t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to: Create Live USB, the easy way!">
-<meta property="og:url" content="http://yoursite.com/2012/06/05/how-to-create-live-usb/index.html">
+<meta property="og:url" content="http://kvrohit.github.io/2012/06/05/how-to-create-live-usb/index.html">
 <meta property="og:site_name" content="kvrohit.github.io">
 <meta property="og:description" content="Ever wondered if you could create a live usb without using any third party software ? Read on…
 Pre-requisites:
@@ -90,7 +90,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kvrohit.github.io"></form>
       </div>
     </div>
   </div>
@@ -130,9 +130,9 @@ ga('send', 'pageview');
 <li>ISO image of your favorite linux distro</li>
 </ul>
 <p>We’ll be using the <code>dd</code> command to write the iso file to the usb stick. The general syntax is shown below:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use the dd command to write to your usb</span></span><br><span class="line"><span class="comment"># parameters: if='input file', of='output file/device'</span></span><br><span class="line"><span class="comment"># use dmesg to find out your usb device. Ex: /dev/sdb</span></span><br><span class="line"><span class="comment"># replace sdx with your device name</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=path_to_iso.iso of=/dev/sdx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Use the dd command to write to your usb</span></span><br><span class="line"><span class="comment"># parameters: if='input file', of='output file/device'</span></span><br><span class="line"><span class="comment"># use dmesg to find out your usb device. Ex: /dev/sdb</span></span><br><span class="line"><span class="comment"># replace sdx with your device name</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=path_to_iso.iso of=/dev/sdx</span><br></pre></td></tr></table></figure>
 <p>And now, the example. Suppose you want to create a live usb out of your ubuntu-12.04 iso, assuming that your usb stick is mounted at <code>/dev/sdb</code>, the command to issue is:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=ubuntu-<span class="number">12.04</span>.iso of=/dev/sdb</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=ubuntu-<span class="number">12.04</span>.iso of=/dev/sdb</span><br></pre></td></tr></table></figure>
 <p>Extremely simple, isn’t it ?</p>
 <p><strong><em>IMPORTANT:</em></strong></p>
 <ul>
@@ -144,7 +144,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2012/06/05/how-to-create-live-usb/" data-id="ci8q10s29001a3scm57y63y7r" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2012/06/05/how-to-create-live-usb/" data-id="ci8q3y3xx001aa5cmsty1gf22" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live-usb/">live usb</a></li></ul>

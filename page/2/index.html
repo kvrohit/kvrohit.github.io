@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>New Prototype | kvrohit.github.io</title>
+  <title>kvrohit.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="It has been long… a long time since the blog has been updated. For the past few months our development work has suffered due to the pressure on us from the academic point of view.
-Well, I did find tim">
-<meta property="og:type" content="article">
-<meta property="og:title" content="New Prototype">
-<meta property="og:url" content="http://kvrohit.github.io/2007/06/08/new-prototype/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kvrohit.github.io">
+<meta property="og:url" content="http://kvrohit.github.io/page/2/index.html">
 <meta property="og:site_name" content="kvrohit.github.io">
-<meta property="og:description" content="It has been long… a long time since the blog has been updated. For the past few months our development work has suffered due to the pressure on us from the academic point of view.
-Well, I did find tim">
-<meta property="og:image" content="http://3.bp.blogspot.com/_L4ZwP_X8bCo/RmmL7g35EXI/AAAAAAAAAA4/D7he4uW390c/s1600/GepScreen.bmp">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="New Prototype">
-<meta name="twitter:description" content="It has been long… a long time since the blog has been updated. For the past few months our development work has suffered due to the pressure on us from the academic point of view.
-Well, I did find tim">
+<meta name="twitter:title" content="kvrohit.github.io">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="kvrohit.github.io" type="application/atom+xml">
   
@@ -79,7 +75,168 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-new-prototype" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-what-is-love" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/12/30/what-is-love/" class="article-date">
+  <time datetime="2012-12-29T18:30:00.000Z" itemprop="datePublished">2012-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/12/30/what-is-love/">What is love?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/2012/12/30/what-is-love/what-is-love.png">
+<p>And that, ladies and gentlemen is the answer to your question! Linux style :P</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kvrohit.github.io/2012/12/30/what-is-love/" data-id="ci8q3y3xv0017a5cmozy8v7a3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/funny/">funny</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-create-live-usb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/06/05/how-to-create-live-usb/" class="article-date">
+  <time datetime="2012-06-04T18:30:00.000Z" itemprop="datePublished">2012-06-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/05/how-to-create-live-usb/">How to: Create Live USB, the easy way!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ever wondered if you could create a live usb without using any third party software ? Read on…</p>
+<p>Pre-requisites:</p>
+<ul>
+<li>Linux</li>
+<li>USB Stick</li>
+<li>ISO image of your favorite linux distro</li>
+</ul>
+<p>We’ll be using the <code>dd</code> command to write the iso file to the usb stick. The general syntax is shown below:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Use the dd command to write to your usb</span></span><br><span class="line"><span class="comment"># parameters: if='input file', of='output file/device'</span></span><br><span class="line"><span class="comment"># use dmesg to find out your usb device. Ex: /dev/sdb</span></span><br><span class="line"><span class="comment"># replace sdx with your device name</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=path_to_iso.iso of=/dev/sdx</span><br></pre></td></tr></table></figure>
+<p>And now, the example. Suppose you want to create a live usb out of your ubuntu-12.04 iso, assuming that your usb stick is mounted at <code>/dev/sdb</code>, the command to issue is:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Example</span></span><br><span class="line">sudo dd <span class="keyword">if</span>=ubuntu-<span class="number">12.04</span>.iso of=/dev/sdb</span><br></pre></td></tr></table></figure>
+<p>Extremely simple, isn’t it ?</p>
+<p><strong><em>IMPORTANT:</em></strong></p>
+<ul>
+<li>Take extreme caution while specifying the output device! You do not want to be messing up your HDD.</li>
+<li>As with many linux commands, you will not see any output when you issue the command. You will be notified when the process is complete.</li>
+<li>Your USB stick will be formatted, ensure that you have a backup of your data!</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kvrohit.github.io/2012/06/05/how-to-create-live-usb/" data-id="ci8q3y3xx001aa5cmsty1gf22" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/live-usb/">live usb</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-create-bash-aliases-for-frequently-used-commands" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" class="article-date">
+  <time datetime="2012-02-10T18:30:00.000Z" itemprop="datePublished">2012-02-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/">How to: Create bash aliases for frequently used commands</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The alias command can be quite useful for creating handy shortcuts and save you some typing. It has this general syntax:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># General alias syntax</span></span><br><span class="line"><span class="built_in">alias</span> name=<span class="string">'command'</span></span><br></pre></td></tr></table></figure>
+<p>where ‘name’ is the alias name and command is any valid shell command. If you want your aliases to be persistant then put them in your ~/.bashrc file.</p>
+<p>For example, you can create some handy shortcuts for apt-get:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Alias for apt-get</span></span><br><span class="line"><span class="built_in">alias</span> install=<span class="string">'sudo apt-get install'</span></span><br><span class="line"><span class="built_in">alias</span> addrepo=<span class="string">'sudo apt-add-repository'</span></span><br><span class="line"><span class="built_in">alias</span> remove=<span class="string">'sudo apt-get remove'</span></span><br><span class="line"><span class="built_in">alias</span> autoremove=<span class="string">'sudo apt-get autoremove'</span></span><br><span class="line"><span class="built_in">alias</span> update=<span class="string">'sudo apt-get update'</span></span><br><span class="line"><span class="built_in">alias</span> upgrade=<span class="string">'sudo apt-get upgrade'</span></span><br><span class="line"><span class="built_in">alias</span> distupgrade=<span class="string">'sudo apt-get dist-upgrade'</span></span><br></pre></td></tr></table></figure>
+<p>Restart your shell and you should be good to go!</p>
+<p>Now you can simply type <code>install firefox</code> instead of <code>sudo apt-get install firefox</code>.</p>
+<p>It is a common practice to put all your aliases in a separate file and then load that file into your .bashrc. The way to do this is to copy all the aliases to another file say, .bash_aliases.</p>
+<p>Then, edit your .bashrc file and add the following code:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># include .bash_aliases if it exists</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-f</span> <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span> ]; <span class="keyword">then</span></span><br><span class="line">    . <span class="string">"<span class="variable">$HOME</span>/.bash_aliases"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>Inform the shell of these changes by executing the command: <code>exec $SHELL</code></p>
+<p><strong><em>NOTE</em></strong></p>
+<p>If you are on Ubuntu, you do not have to edit the .bashrc file; .bash_aliases will be already included for you.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kvrohit.github.io/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" data-id="ci8q3y3y0001fa5cmi3wiihyl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/alias/">alias</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-new-prototype" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2007/06/08/new-prototype/" class="article-date">
   <time datetime="2007-06-07T18:30:00.000Z" itemprop="datePublished">2007-06-08</time>
@@ -96,8 +253,8 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      New Prototype
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/06/08/new-prototype/">New Prototype</a>
     </h1>
   
 
@@ -121,29 +278,65 @@ ga('send', 'pageview');
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2012/02/11/how-to-create-bash-aliases-for-frequently-used-commands/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          How to: Create bash aliases for frequently used commands
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2006/04/27/iamps-back/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">iAMP&#39;s Back!!</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-iamps-back" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/04/27/iamps-back/" class="article-date">
+  <time datetime="2006-04-26T18:30:00.000Z" itemprop="datePublished">2006-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/04/27/iamps-back/">iAMP&#39;s Back!!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://photos1.blogger.com/blogger/901/2661/1600/iAmp.2.gif" alt="iAmp"></p>
+<p>Well, iAMP’s back, I’ve decided to keep it as the default skin.. atleast for now… (by the way, the player does not have two stop buttons, I was too lazy to draw the pause button, so I just used the stop button as a substitute)</p>
+<p>Newly Added features:</p>
+<ul>
+<li>ID3v2x tag handling (Rohit, et. al.)</li>
+<li>MPEG information reading</li>
+<li>Real time tag editing!!! can even update the tag while the song is playing!!</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kvrohit.github.io/2006/04/27/iamps-back/" data-id="ci8q3y3wk0000a5cm19zagdno" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio-player/">audio player</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iamp/">iamp</a></li></ul>
+
+    </footer>
+  </div>
   
 </article>
 
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </section>
         
           <aside id="sidebar">
