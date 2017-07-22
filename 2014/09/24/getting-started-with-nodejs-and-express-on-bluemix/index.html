@@ -6,11 +6,13 @@
   <title>Getting started with Node.js and Express web application framework on Bluemix | kvrohit.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="The purpose of this article is to give you a quick introduction to web application development using node.js and the express web application framework. It will guide you though the process of creating">
+<meta name="keywords" content="nodejs,blumix,express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Getting started with Node.js and Express web application framework on Bluemix">
 <meta property="og:url" content="http://kvrohit.github.io/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/index.html">
 <meta property="og:site_name" content="kvrohit.github.io">
 <meta property="og:description" content="The purpose of this article is to give you a quick introduction to web application development using node.js and the express web application framework. It will guide you though the process of creating">
+<meta property="og:updated_time" content="2015-04-22T09:28:23.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Getting started with Node.js and Express web application framework on Bluemix">
 <meta name="twitter:description" content="The purpose of this article is to give you a quick introduction to web application development using node.js and the express web application framework. It will guide you though the process of creating">
@@ -21,7 +23,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -67,7 +69,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://kvrohit.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kvrohit.github.io"></form>
       </div>
     </div>
   </div>
@@ -100,20 +102,20 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>The purpose of this article is to give you a quick introduction to web application development using node.js and the express web application framework. It will guide you though the process of creating a simple web application and outline the steps involved in deploying this application on Bluemix.</p>
-<h3 id="What_is_Node-js?">What is Node.js?</h3><p>Node.js is a platform for easily building fast, scalable network applications. It uses an event driven, non blocking I/O model that makes it lightweight and efficient.</p>
-<h3 id="What_is_Express?">What is Express?</h3><p>Express is a web application framework for Node.js. It provides a minimal set of features required for building web apps yet maintaining the flexibility to extend.</p>
-<h3 id="What_is_Bluemix?">What is Bluemix?</h3><p>Bluemix is an open-standards, cloud-based platform for building, managing, and running apps of all types, such as web, mobile, big data, and smart devices.</p>
-<h3 id="Pre-requsites">Pre-requsites</h3><ol>
+<h3 id="What-is-Node-js"><a href="#What-is-Node-js" class="headerlink" title="What is Node.js?"></a>What is Node.js?</h3><p>Node.js is a platform for easily building fast, scalable network applications. It uses an event driven, non blocking I/O model that makes it lightweight and efficient.</p>
+<h3 id="What-is-Express"><a href="#What-is-Express" class="headerlink" title="What is Express?"></a>What is Express?</h3><p>Express is a web application framework for Node.js. It provides a minimal set of features required for building web apps yet maintaining the flexibility to extend.</p>
+<h3 id="What-is-Bluemix"><a href="#What-is-Bluemix" class="headerlink" title="What is Bluemix?"></a>What is Bluemix?</h3><p>Bluemix is an open-standards, cloud-based platform for building, managing, and running apps of all types, such as web, mobile, big data, and smart devices.</p>
+<h3 id="Pre-requsites"><a href="#Pre-requsites" class="headerlink" title="Pre-requsites"></a>Pre-requsites</h3><ol>
 <li><a href="http://nodejs.org" target="_blank" rel="external">Node.js</a></li>
 <li><a href="https://github.com/cloudfoundry/cli#downloads" target="_blank" rel="external">CloudFoundry deployment tools</a></li>
 <li><a href="Sign up for free">Bluemix account</a></li>
 </ol>
 <a id="more"></a>
-<h3 id="First_steps">First steps</h3><p>Ensure that you have node and npm installed and running correctly. To test open a command window and type:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<h3 id="First-steps"><a href="#First-steps" class="headerlink" title="First steps"></a>First steps</h3><p>Ensure that you have node and npm installed and running correctly. To test open a command window and type:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ node -v</div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
 <p>It should return the version information in each case indicating that the programs are correctly installed.</p>
 <p><code>npm</code> is a package manager for node; it makes it easy to install and manage additional node packages that your application may require. npm is a powerful tool as it automatically handles package dependencies.</p>
-<h3 id="Initializing_a_node_application">Initializing a node application</h3><p>Every node application has a package.json file that contains a description about the app, module dependencies, start scripts and so on. This is usually the first file created to describe the app and its dependencies.</p>
+<h3 id="Initializing-a-node-application"><a href="#Initializing-a-node-application" class="headerlink" title="Initializing a node application"></a>Initializing a node application</h3><p>Every node application has a package.json file that contains a description about the app, module dependencies, start scripts and so on. This is usually the first file created to describe the app and its dependencies.</p>
 <p>The package.json file can be created manually provided you know what all fields to include. To make this process simpler, npm offers the init command to create this file for you. To create an app follow these steps:</p>
 <ol>
 <li>Create a folder in your file system, give it a suitable name. For the purposes of this article the project that we’ll be creating is called ‘activate’</li>
@@ -122,20 +124,20 @@ ga('send', 'pageview');
 <li>After that is done, you will end up with a package.json file.</li>
 </ol>
 <p>An example package.json is shown below:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"test"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Installing_dependencies">Installing dependencies</h3><p>Our application requires the express node module to build a web application. The npm install command can be used to install this dependency. In the application directory type the following command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install express@<span class="number">3.15</span>.<span class="number">2</span> --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</div><div class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</div><div class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</div><div class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</div><div class="line">    <span class="string">"scripts"</span>: &#123;</div><div class="line">        <span class="string">"test"</span>: <span class="string">"node app.js"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"keywords"</span>: [</div><div class="line">        <span class="string">"node.js"</span>,</div><div class="line">        <span class="string">"express"</span>,</div><div class="line">        <span class="string">"bluemix"</span></div><div class="line">    ],</div><div class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</div><div class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Installing-dependencies"><a href="#Installing-dependencies" class="headerlink" title="Installing dependencies"></a>Installing dependencies</h3><p>Our application requires the express node module to build a web application. The npm install command can be used to install this dependency. In the application directory type the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install express@3.15.2 --save</div></pre></td></tr></table></figure>
 <p>This will do two things:</p>
 <ol>
 <li>Download and install express and all of its dependencies to this application’s folder. These are stored under the node_modules directory.</li>
 <li>Creates an entry in the package.json file under the dependencies section.</li>
 </ol>
 <p>Here is a look at the updated package.json file:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</span><br><span class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</span><br><span class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">    <span class="string">"scripts"</span>: &#123;</span><br><span class="line">        <span class="string">"start"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"keywords"</span>: [</span><br><span class="line">        <span class="string">"node.js"</span>,</span><br><span class="line">        <span class="string">"express"</span>,</span><br><span class="line">        <span class="string">"bluemix"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</span><br><span class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</span><br><span class="line">    <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">        <span class="string">"express"</span>: <span class="string">"^3.15.2"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"activate"</span>,</div><div class="line">    <span class="string">"version"</span>: <span class="string">"0.0.1"</span>,</div><div class="line">    <span class="string">"description"</span>: <span class="string">"Node.js + Express app deployed on Bluemix"</span>,</div><div class="line">    <span class="string">"main"</span>: <span class="string">"app.js"</span>,</div><div class="line">    <span class="string">"scripts"</span>: &#123;</div><div class="line">        <span class="string">"start"</span>: <span class="string">"node app.js"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"keywords"</span>: [</div><div class="line">        <span class="string">"node.js"</span>,</div><div class="line">        <span class="string">"express"</span>,</div><div class="line">        <span class="string">"bluemix"</span></div><div class="line">    ],</div><div class="line">    <span class="string">"author"</span>: <span class="string">"Rohit"</span>,</div><div class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">    <span class="string">"dependencies"</span>: &#123;</div><div class="line">        <span class="string">"express"</span>: <span class="string">"^3.15.2"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Note: Under the scripts section, you have to manually change “test” to “start”; this tells Bluemix the entry point of this application. Once the app has been deployed, Bluemix calls the start script i.e. <code>node app.js</code></p>
-<h3 id="Creating_a_minimalistic_web_application">Creating a minimalistic web application</h3><p>Now that express is installed, we can go ahead and create a minimalistic web application. All this application does is to print out <code>&#39;hello world&#39;</code> when the application is accessed. As stated before the entry point to our application will be called <code>app.js</code>. Let’s go ahead and create a file called app.js and put in the following code:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">        app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Port and host configuration</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.VCAP_APP_PORT || <span class="number">3000</span>);</span><br><span class="line">app.set(<span class="string">'host'</span>, process.env.VCAP_APP_HOST || <span class="string">'localhost'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Define a default route</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>&#123;</span><br><span class="line">    response.send(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start serving</span></span><br><span class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="Code_walkthrough">Code walkthrough</h3><ul>
+<h3 id="Creating-a-minimalistic-web-application"><a href="#Creating-a-minimalistic-web-application" class="headerlink" title="Creating a minimalistic web application"></a>Creating a minimalistic web application</h3><p>Now that express is installed, we can go ahead and create a minimalistic web application. All this application does is to print out <code>&#39;hello world&#39;</code> when the application is accessed. As stated before the entry point to our application will be called <code>app.js</code>. Let’s go ahead and create a file called app.js and put in the following code:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</div><div class="line">        app = express();</div><div class="line"></div><div class="line"><span class="comment">// Port and host configuration</span></div><div class="line">app.set(<span class="string">'port'</span>, process.env.VCAP_APP_PORT || <span class="number">3000</span>);</div><div class="line">app.set(<span class="string">'host'</span>, process.env.VCAP_APP_HOST || <span class="string">'localhost'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Define a default route</span></div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">    response.send(<span class="string">'hello world'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Start serving</span></div><div class="line">app.listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Code-walkthrough"><a href="#Code-walkthrough" class="headerlink" title="Code walkthrough"></a>Code walkthrough</h3><ul>
 <li>Step 1: Import the express module into our app; this is done by using the require method call.</li>
 <li>Step 2: Create an app instance by calling the express() method.</li>
 <li>Step 3: Define the port and host settings. While running locally, port is assigned with 3000 as its value and host is assigned <code>&#39;localhost&#39;</code>. When deployed on Bluemix, the <code>VCAP_APP_PORT</code> and <code>VCAP_APP_HOST</code> environment variables are used. These variables are populated by Bluemix</li>
@@ -143,12 +145,12 @@ ga('send', 'pageview');
 <li>Step 5: The listen method is called to bind and listen to connections on the given host and port.</li>
 </ul>
 <p>Run application locally. Open the terminal, <code>cd</code> into the project directory and run:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm start</div></pre></td></tr></table></figure>
 <p>You should see an output something like this:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">activate@<span class="number">0.0</span>.<span class="number">1</span> start C:\rohit\node-apps\activate</span><br><span class="line">node app.js</span><br><span class="line">Express server listening on port <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">activate@0.0.1 start C:\rohit\node-apps\activate</div><div class="line">node app.js</div><div class="line">Express server listening on port 3000</div></pre></td></tr></table></figure>
 <p>This indicates that the express server is started and is ready to serve requests on port 3000. Go to <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> to see the output. Here is a screen grab:</p>
 <p>Now that we have this application running locally, the next step is to deploy it on Bluemix.</p>
-<h3 id="Deploying_on_Bluemix">Deploying on Bluemix</h3><ol>
+<h3 id="Deploying-on-Bluemix"><a href="#Deploying-on-Bluemix" class="headerlink" title="Deploying on Bluemix"></a>Deploying on Bluemix</h3><ol>
 <li>Login to Bluemix web interface</li>
 <li>Under the dashboard section select Create an app as shown below:</li>
 <li>In the next screen select SDK for Node.js</li>
@@ -156,23 +158,23 @@ ga('send', 'pageview');
 <li>Click create and if everything is successful you should see the application overview screen</li>
 </ol>
 <p>As you can see the default route is shown in the overview section, i.e., <a href="http://activate.stage1.mybluemix.net/" target="_blank" rel="external">http://activate.stage1.mybluemix.net/</a></p>
-<h3 id="Pushing_your_application_to_the_cloud">Pushing your application to the cloud</h3><p>The final step is to push your application code to the cloud, i.e., to the Bluemix app that you just created. The pre-requisite for this is to install the cloud foundry deployment tools as mentioned in the pre-requisites section. To verify the cf command line tool’s installation; open a terminal and type:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf -v</span><br></pre></td></tr></table></figure>
+<h3 id="Pushing-your-application-to-the-cloud"><a href="#Pushing-your-application-to-the-cloud" class="headerlink" title="Pushing your application to the cloud"></a>Pushing your application to the cloud</h3><p>The final step is to push your application code to the cloud, i.e., to the Bluemix app that you just created. The pre-requisite for this is to install the cloud foundry deployment tools as mentioned in the pre-requisites section. To verify the cf command line tool’s installation; open a terminal and type:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cf -v</div></pre></td></tr></table></figure>
 <p>You should get a response with version information indicating that the installation is successful. Go to the project directory in terminal and follow these steps:</p>
 <ul>
 <li>Connect to Bluemix:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf api https://api.stage1.ng.bluemix.net</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cf api https://api.stage1.ng.bluemix.net</div></pre></td></tr></table></figure>
 <ul>
 <li>Login to bluemix:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf login</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cf login</div></pre></td></tr></table></figure>
 <ul>
 <li>Push application to cloud:</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf push &lt;app_name&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cf push &lt;app_name&gt;</div></pre></td></tr></table></figure>
 <p>where app_name is the name of the application that you specified during Bluemix app creation process. For this example it will be:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cf push activate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ cf push activate</div></pre></td></tr></table></figure>
 <p>The application deployment will be initiated as soon as the push command is run. Bluemix will automatically figure out the application type, read the package.json file and install all dependencies.</p>
 <p>TIP: The cf push command copies all the contents of the project directory into the server. At times some files/directories need to be ignored.</p>
 <p>In our case the ‘node_modules’ directory need not be uploaded as it will be created dynamically on the server after app deployment. To tell cf to ignore this folder simply create a file called .cfignore in the project root directory with the content: node_modules/</p>
@@ -184,7 +186,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://kvrohit.github.io/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/" data-id="ci8uhbxcr000v5wcmhubafcu6" class="article-share-link">Share</a>
+      <a data-url="http://kvrohit.github.io/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/" data-id="cj5ezy6cl0033p5ycdfmi98du" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blumix/">blumix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -223,7 +225,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/screenshot/">screenshot</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutorial/">tutorial</a><span class="category-list-count">6</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/music/">music</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/screenshot/">screenshot</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutorial/">tutorial</a><span class="category-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +234,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alias/">alias</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arch/">arch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audio-player/">audio player</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blumix/">blumix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/custom-rom/">custom rom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/desktop/">desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fmod/">fmod</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/funny/">funny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iamp/">iamp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kde/">kde</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kitkat/">kitkat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/live-usb/">live usb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manjaro/">manjaro</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/micromax-canvas-hd/">micromax canvas hd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-doge/">project doge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prototype/">prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screenshot/">screenshot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sight-read/">sight read</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/staff/">staff</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xfce/">xfce</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xkcd/">xkcd</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/alias/">alias</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arch/">arch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audio-player/">audio player</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blumix/">blumix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/compositions/">compositions</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/custom-rom/">custom rom</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d3/">d3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/desktop/">desktop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/experiments/">experiments</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fmod/">fmod</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/funny/">funny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guitar/">guitar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iamp/">iamp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kde/">kde</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kitkat/">kitkat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/live-usb/">live usb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manjaro/">manjaro</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/micromax-canvas-hd/">micromax canvas hd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-doge/">project doge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prototype/">prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screenshot/">screenshot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sight-read/">sight read</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/staff/">staff</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xfce/">xfce</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xkcd/">xkcd</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -241,7 +243,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/alias/" style="font-size: 10px;">alias</a><a href="/tags/android/" style="font-size: 10px;">android</a><a href="/tags/app/" style="font-size: 10px;">app</a><a href="/tags/arch/" style="font-size: 10px;">arch</a><a href="/tags/audio-player/" style="font-size: 13.33px;">audio player</a><a href="/tags/bash/" style="font-size: 10px;">bash</a><a href="/tags/blumix/" style="font-size: 10px;">blumix</a><a href="/tags/custom-rom/" style="font-size: 10px;">custom rom</a><a href="/tags/desktop/" style="font-size: 16.67px;">desktop</a><a href="/tags/express/" style="font-size: 10px;">express</a><a href="/tags/fmod/" style="font-size: 10px;">fmod</a><a href="/tags/funny/" style="font-size: 13.33px;">funny</a><a href="/tags/game/" style="font-size: 10px;">game</a><a href="/tags/iamp/" style="font-size: 10px;">iamp</a><a href="/tags/kde/" style="font-size: 16.67px;">kde</a><a href="/tags/kitkat/" style="font-size: 10px;">kitkat</a><a href="/tags/linux/" style="font-size: 20px;">linux</a><a href="/tags/live-usb/" style="font-size: 10px;">live usb</a><a href="/tags/manjaro/" style="font-size: 13.33px;">manjaro</a><a href="/tags/micromax-canvas-hd/" style="font-size: 10px;">micromax canvas hd</a><a href="/tags/music/" style="font-size: 10px;">music</a><a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a><a href="/tags/project-doge/" style="font-size: 10px;">project doge</a><a href="/tags/prototype/" style="font-size: 10px;">prototype</a><a href="/tags/screenshot/" style="font-size: 16.67px;">screenshot</a><a href="/tags/sight-read/" style="font-size: 10px;">sight read</a><a href="/tags/staff/" style="font-size: 10px;">staff</a><a href="/tags/xfce/" style="font-size: 13.33px;">xfce</a><a href="/tags/xkcd/" style="font-size: 10px;">xkcd</a>
+      <a href="/tags/alias/" style="font-size: 10px;">alias</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/app/" style="font-size: 13.33px;">app</a> <a href="/tags/arch/" style="font-size: 10px;">arch</a> <a href="/tags/audio-player/" style="font-size: 13.33px;">audio player</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/blumix/" style="font-size: 10px;">blumix</a> <a href="/tags/compositions/" style="font-size: 13.33px;">compositions</a> <a href="/tags/custom-rom/" style="font-size: 10px;">custom rom</a> <a href="/tags/d3/" style="font-size: 10px;">d3</a> <a href="/tags/desktop/" style="font-size: 16.67px;">desktop</a> <a href="/tags/experiments/" style="font-size: 10px;">experiments</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/fmod/" style="font-size: 10px;">fmod</a> <a href="/tags/funny/" style="font-size: 13.33px;">funny</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/guitar/" style="font-size: 13.33px;">guitar</a> <a href="/tags/iamp/" style="font-size: 10px;">iamp</a> <a href="/tags/kde/" style="font-size: 16.67px;">kde</a> <a href="/tags/kitkat/" style="font-size: 10px;">kitkat</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/live-usb/" style="font-size: 10px;">live usb</a> <a href="/tags/manjaro/" style="font-size: 13.33px;">manjaro</a> <a href="/tags/micromax-canvas-hd/" style="font-size: 10px;">micromax canvas hd</a> <a href="/tags/music/" style="font-size: 16.67px;">music</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/project-doge/" style="font-size: 10px;">project doge</a> <a href="/tags/prototype/" style="font-size: 10px;">prototype</a> <a href="/tags/screenshot/" style="font-size: 16.67px;">screenshot</a> <a href="/tags/sight-read/" style="font-size: 10px;">sight read</a> <a href="/tags/staff/" style="font-size: 10px;">staff</a> <a href="/tags/xfce/" style="font-size: 13.33px;">xfce</a> <a href="/tags/xkcd/" style="font-size: 10px;">xkcd</a>
     </div>
   </div>
 
@@ -250,7 +252,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/06/">June 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -262,23 +264,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2017/07/22/stars/">Stars</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/19/d3-experiments/">D3 Experiments</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/07/arch-metal/">Arch Metal</a>
+          </li>
+        
+          <li>
             <a href="/2015/04/23/soprano/">Soprano</a>
           </li>
         
           <li>
             <a href="/2015/04/22/arch-kde/">Arch KDE</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/24/getting-started-with-nodejs-and-express-on-bluemix/">Getting started with Node.js and Express web application framework on Bluemix</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/07/project-doge-on-micromax-canvas-hd/">Project Doge on Micromax Canvas HD</a>
-          </li>
-        
-          <li>
-            <a href="/2014/02/16/standing/">Standing</a>
           </li>
         
       </ul>
@@ -293,7 +295,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Rohit K Viswanath<br>
+      &copy; 2017 Rohit K Viswanath<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -311,11 +313,11 @@ ga('send', 'pageview');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
 <script src="//use.typekit.net/mdu2bwc.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
