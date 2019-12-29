@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte",
+    "../../Button.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import notes from \"./notes.js\";\n  import buttons from \"./buttons.js\";\n  import { fade } from \"svelte/transition\";\n\n  import Button from \"./Button.svelte\";\n\n  const noteTypes = [\"natural\", \"sharp\", \"flat\"];\n\n  const noteImg = {\n    natural: \"img/wholenote.png\",\n    sharp: \"img/sharpnote.png\",\n    flat: \"img/flatnote.png\"\n  };\n\n  const defaults = () => {\n    return {\n      natural: [],\n      sharp: [],\n      flat: []\n    };\n  };\n\n  let paintNotes = defaults();\n  const drawNotes = note => {\n    paintNotes = defaults();\n    notes\n      .filter(n => n.note === note)\n      .forEach(n => {\n        paintNotes[n.type].push(n.pos);\n      });\n  };\n</script>\n\n<style>\n  main {\n    width: 800px;\n    margin: 0 auto;\n  }\n  h1 {\n    color: #ff3e00;\n    text-transform: uppercase;\n    font-size: 4em;\n    font-weight: 100;\n  }\n  .staff {\n    position: relative;\n  }\n  .controls {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: space-between;\n  }\n</style>\n\n<main>\n  <h1>Soprano</h1>\n  <div class=\"staff\">\n    <img src=\"img/staff.png\" alt=\"image of staff\" />\n    {#each noteTypes as type}\n      {#each paintNotes[type] as notePos (notePos.top)}\n        <img\n          transition:fade\n          src={noteImg[type]}\n          alt=\"image of a {type} note\"\n          style=\"position:absolute; top: {notePos.top}px; left: {notePos.left}px;\" />\n      {/each}\n    {/each}\n  </div>\n  <div class=\"controls\">\n    {#each buttons as button}\n      <Button\n        handleClick={() => {\n          drawNotes(button.key);\n        }}\n        label={button.label} />\n    {/each}\n    <Button\n      label=\"*\"\n      handleClick={() => {\n        paintNotes = defaults();\n      }} />\n  </div>\n</main>\n",
+    "<script>\n  export let label = \"B\";\n  export let handleClick = () => {};\n</script>\n\n<style>\n  button {\n    min-width: 75px;\n    padding: 20px;\n    margin-right: 10px;\n    border-radius: 5px;\n    box-shadow: 0 2px 3px #eeeeee;\n  }\n</style>\n\n<button on:click={handleClick}>{label}</button>\n"
+  ],
+  "names": [],
+  "mappings": "AAmCE,IAAI,eAAC,CAAC,AACJ,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AACD,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AACD,MAAM,eAAC,CAAC,AACN,QAAQ,CAAE,QAAQ,AACpB,CAAC,AACD,SAAS,eAAC,CAAC,AACT,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,aAAa,AAChC,CAAC;AC/CD,MAAM,cAAC,CAAC,AACN,SAAS,CAAE,IAAI,CACf,OAAO,CAAE,IAAI,CACb,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,GAAG,CAClB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,OAAO,AAC/B,CAAC"
+}
